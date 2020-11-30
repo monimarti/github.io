@@ -1,0 +1,202 @@
+@charset "UTF-8";
+/* CSS Document */
+
+/*--------------------------------------------------------------
+>>> CSS STANDARDS
+----------------------------------------------------------------
+1. Place in appropriate section
+2. Add new sections to the Table of Contents as needed
+3. Order properties consistently inside each declaration i.e. alphabetically or by function 
+4. Declaration selectors should each occupy a new line
+5. Enter one new line between rules
+6. Enter more than one new line between categories 
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+1.0 - Settings: used with preprocessors and contain font, colors definitions, etc.
+2.0 - Tools: globally used mixins and functions. Use for preprocessor only.
+3.0 - Generic: reset and/or normalize styles, box-sizing definition, etc. 
+4.0 - Elements: styling for bare/generic HTML elements 
+        - Forms
+        - Lists
+        - Media
+        - Tables
+        - Typography: Headings, Paragraphs, Blockquotes, Anchors
+5.0 - Objects: class-based selectors which define undecorated design patterns, building blocks
+        - Framework
+6.0 - Components: specific designed components
+		- Type
+		- Layout
+        - Buttons
+        - Header
+        - Navigation 
+7.0 - Utilities: utilities and helper classes with ability to override anything which goes before in the triangle, eg. hide helper class
+        - Alignment	    
+        - Color
+        - Size
+
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+3.0 - GENERIC
+-------------------------------------------------------------- */
+
+*, h1, h2, h3, h4  { 
+	font-family: 'effra', sans-serif;
+	font-style: normal;
+	font-weight: 500;
+	font-size: 10px;
+	
+}
+
+/*--------------------------------------------------------------
+4.0 - ELEMENTS 
+-------------------------------------------------------------- */
+
+/* -- TYPOGRAPHY -- */ 
+
+.hero-image-mm p, h2,h3, #home-page-menu-mm p{
+	font-family: mokoko, serif;
+	font-style: normal;
+	font-weight: 500;
+}
+.hero-image-mm p {
+	font-size: 2.5rem;
+	line-height: 3.5rem;
+}
+h2 {
+	font-size: 2.5rem;
+}
+#home-page-menu-mm p, h3
+{
+	font-size: 1.5rem;
+}
+nav, .hero-image-mm p, h2, h3, #home-page-menu-mm p {
+	color: pink;
+}
+nav, h2, h3, #home-page-menu-mm p, footer li {
+	text-transform: uppercase;
+}
+#beer-month-mm h3 {
+	color: #000000;
+}
+
+
+@media screen and (min-width: 768px) {
+	.hero-image-mm p {
+		font-size: 4rem;
+		line-height: 4.5rem;
+	}
+	#home-page-menu-mm p, h3, #featured-breweries-mm p {
+		font-size: 2rem;
+	}
+
+	
+}
+
+@media screen and (min-width: 1024px) {
+	
+	.hero-image-mm p {
+		font-size: 5.5rem;
+		line-height: 6rem;
+	}
+	
+}
+
+/*--------------------------------------------------------------
+5.0 - OBJECTS
+-------------------------------------------------------------- */
+
+/* -- FRAMEWORK -- */ 
+
+
+/*--------------------------------------------------------------
+6.0 - COMPONENTS
+-------------------------------------------------------------- */
+
+/* -- TYPE -- */ 
+
+/*
+nav li, nav div{
+	display: inline-block; 
+}
+
+nav div:last-child li {
+	display: block;
+}
+*/
+
+header li {
+	list-style-type: none;
+}
+
+nav div:last-child li a {
+	margin-right: 20px;
+}
+
+nav div li{
+	text-justify: center;
+}
+/* -- LAYOUT -- */ 
+
+
+
+/* -- BUTTONS -- */
+
+
+/* -- HEADERS -- */ 
+
+
+@media screen and (min-width: 640px) {
+	
+	/*TYPE*/
+	
+
+	
+	/*LAYOUT*/
+	
+	header li, footer ul:first-child li {
+	display: inline-block;
+	}
+	
+	
+}
+
+@media screen and (min-width: 1024px) {
+ 
+	
+}
+
+/*--------------------------------------------------------------
+7.0 - UTILITES
+-------------------------------------------------------------- */
+
+/* -- ALLIGNMENT -- */ 
+
+
+.gray-bg-mm {
+	background-color: gray;
+}
+
+.bg-black-mm p {
+	color: #fff;
+}
+
+.bg-black-mm {
+	background-color: #000;
+	padding: 50px 0;
+}
+
+.hero-image-mm {
+  background: url("../img/home-page-hero.jpg") 100% no-repeat;
+  background-size: cover;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 60vh;
+}
+
+

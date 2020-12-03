@@ -57,31 +57,50 @@
 
 /* -- TYPOGRAPHY -- */ 
 
-.hero-image-mm p, h2,h3, #home-page-menu-mm p{
+.hero-image-mm p, h2,h3, #home-page-menu-mm p, #home-page-menu-mm a, .button a, #featured-breweries-mm p, #cocktail-list p {
 	font-family: mokoko, serif;
 	font-style: normal;
 	font-weight: 500;
 }
+
 .hero-image-mm p {
 	font-size: 2.5rem;
 	line-height: 3.5rem;
 }
-h2 {
+
+h2, #featured-breweries-mm p, #cocktail-list p:first-child{
 	font-size: 2.5rem;
 }
-#home-page-menu-mm p, h3
-{
+
+#home-page-menu-mm p, h3, #home-page-menu-mm a, .button a, .hero-intro-text {
 	font-size: 1.5rem;
 }
-nav, .hero-image-mm p, h2, h3, #home-page-menu-mm p {
-	color: pink;
+nav, .hero-image-mm p, h2, h3, #home-page-menu-mm p, #home-page-menu-mm a, .button a {
+	color: #fff;
 }
-nav, h2, h3, #home-page-menu-mm p, footer li {
+
+nav, h2, h3, #home-page-menu-mm p, footer li, #featured-breweries-mm p, #cocktail-list p {
 	text-transform: uppercase;
 }
-#beer-month-mm h3 {
-	color: #000000;
+
+
+
+#beer-month-mm h3, #about-content-mm h2 {
+	color: #1F1F1D;
 }
+
+#featured-drinks-mm h3 {
+	font-size: 1.5rem;
+}
+
+.featured-drinks-text, .about-content-text {
+	padding: 60px;
+}
+
+.breweries-logo-spacing {
+	margin-bottom: 15px;
+}
+
 
 
 @media screen and (min-width: 768px) {
@@ -89,7 +108,7 @@ nav, h2, h3, #home-page-menu-mm p, footer li {
 		font-size: 4rem;
 		line-height: 4.5rem;
 	}
-	#home-page-menu-mm p, h3, #featured-breweries-mm p {
+	#home-page-menu-mm p, h3 {
 		font-size: 2rem;
 	}
 
@@ -118,15 +137,9 @@ nav, h2, h3, #home-page-menu-mm p, footer li {
 
 /* -- TYPE -- */ 
 
-/*
-nav li, nav div{
-	display: inline-block; 
+.top-bar, .top-bar ul {
+    background-color: #1F1F1D;
 }
-
-nav div:last-child li {
-	display: block;
-}
-*/
 
 header li {
 	list-style-type: none;
@@ -141,10 +154,22 @@ nav div li{
 }
 /* -- LAYOUT -- */ 
 
+/*-- SPACING FOR CONTENT --*/
 
+#home-page-menu-mm, #featured-drinks-mm, #featured-breweries-mm, #about-content-mm, #about-content-mm, #cocktail-list{
+	margin-top: 40px;
+	margin-bottom: 40px;
+}
+
+#cocktail-list p:first-child {
+	margin-top:70px;
+	margin-bottom:0;
+}
 
 /* -- BUTTONS -- */
-
+.bg-yellow-button, .button {
+	background-color: #ffb100;
+}
 
 /* -- HEADERS -- */ 
 
@@ -161,6 +186,11 @@ nav div li{
 	display: inline-block;
 	}
 	
+	.center {
+	position: relative;
+	top: -40%;
+
+	}
 	
 }
 
@@ -180,12 +210,12 @@ nav div li{
 	background-color: gray;
 }
 
-.bg-black-mm p {
+.bg-black-mm p, #featured-drinks-mm p {
 	color: #fff;
 }
 
-.bg-black-mm {
-	background-color: #000;
+.bg-black-mm, #beer-month-mm {
+	background-color: #1F1F1D;
 	padding: 50px 0;
 }
 

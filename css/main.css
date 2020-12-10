@@ -57,7 +57,8 @@
 
 /* -- TYPOGRAPHY -- */ 
 
-.hero-image-mm p, h2,h3, #home-page-menu-mm p, #home-page-menu-mm a, .button a, #featured-breweries-mm p, #cocktail-list p {
+.hero-image-mm p, h2,h3, #home-page-menu-mm p, #home-page-menu-mm a, .button a, #featured-breweries-mm p, #cocktail-list p:first-child, #music-page-menu p:first-of-type, 
+#events-page-menu p:first-of-type {
 	font-family: mokoko, serif;
 	font-style: normal;
 	font-weight: 500;
@@ -72,26 +73,23 @@ h2, #featured-breweries-mm p, #cocktail-list p:first-child{
 	font-size: 2.5rem;
 }
 
-#home-page-menu-mm p, h3, #home-page-menu-mm a, .button a, .hero-intro-text {
+#home-page-menu-mm p, h3, #home-page-menu-mm a, .hero-intro-text, #music-page-menu p:first-of-type, #events-page-menu p:first-of-type, #featured-drinks-mm h3 {
 	font-size: 1.5rem;
 }
-nav, .hero-image-mm p, h2, h3, #home-page-menu-mm p, #home-page-menu-mm a, .button a {
+nav, .hero-image-mm p, h2, h3, #home-page-menu-mm p, #home-page-menu-mm a, .button a, footer a{
 	color: #fff;
 }
 
-nav, h2, h3, #home-page-menu-mm p, footer li, #featured-breweries-mm p, #cocktail-list p {
+nav, h2, h3, #home-page-menu-mm p, footer li, #featured-breweries-mm p, #cocktail-list p:first-child, #music-page-menu p:first-of-type, #events-page-menu p:first-of-type, footer a{
 	text-transform: uppercase;
 }
 
 
-
-#beer-month-mm h3, #about-content-mm h2 {
+#beer-month-mm h3, #about-content-mm h2, #music-page h2, .events-page h2  {
 	color: #1F1F1D;
 }
 
-#featured-drinks-mm h3 {
-	font-size: 1.5rem;
-}
+ 
 
 .featured-drinks-text, .about-content-text {
 	padding: 60px;
@@ -101,16 +99,20 @@ nav, h2, h3, #home-page-menu-mm p, footer li, #featured-breweries-mm p, #cocktai
 	margin-bottom: 15px;
 }
 
-
+.button a, footer p {
+	font-size: 1rem;
+}
 
 @media screen and (min-width: 768px) {
 	.hero-image-mm p {
 		font-size: 4rem;
 		line-height: 4.5rem;
 	}
-	#home-page-menu-mm p, h3 {
+	h3 {
 		font-size: 2rem;
 	}
+	
+
 
 	
 }
@@ -122,7 +124,61 @@ nav, h2, h3, #home-page-menu-mm p, footer li, #featured-breweries-mm p, #cocktai
 		line-height: 6rem;
 	}
 	
+	/* -- BREWERY BUTTONS -- */ 
+
+	 .breweries-logo-spacing div, .brewery-hover {
+		border-bottom: solid 10px #ffb100;
+	}
+	.breweries-logo-spacing div:hover, .brewery-hover:hover {
+		border: solid 10px #ffb100;
+
+	}
+	
+	footer div div div:nth-child(3) a:hover {
+		border-bottom: solid 5px #ffb100;
+	}
+	
+	
 }
+
+/* -- HEADER NAVIGATION -- */ 
+
+.top-bar ul:first-child a {
+	color: #fff;
+	margin-right: 50px;
+	
+}
+
+.top-bar .hide-for-small-only a:hover, footer a:hover{
+	color: #ffb100;
+}
+
+.top-bar ul:first-child a:hover {
+	border-bottom: solid thick #ffb100;
+}
+
+.top-bar .hide-for-small-only a {
+	color: #fff;
+	margin-left: 10px;
+	
+}
+
+
+.circle-icon {
+    background: #ffb100;
+    padding:10px;
+    border-radius: 50%;
+}
+
+.circle-icon:hover {
+    background: #fff;
+    padding:10px;
+    border-radius: 50%;
+}
+
+
+
+
 
 /*--------------------------------------------------------------
 5.0 - OBJECTS
@@ -154,9 +210,34 @@ nav div li{
 }
 /* -- LAYOUT -- */ 
 
+/* --TRANSITONS-- */ 
+
+.trans-hz{
+   
+    display: inline-block;
+    background: white; /* default color */
+
+    /* "to left" / "to right" - affects initial color */
+    background: linear-gradient(to left, white 50%, #1F1F1D 50%) right;
+    background-size: 200%;
+    transition: .5s ease-out;
+	
+}
+.trans-container-hz:hover .trans-hz{
+    background-position: left;
+}
+
+.trans-left {
+	width: 100px;
+	
+}
+
+
+
+
 /*-- SPACING FOR CONTENT --*/
 
-#home-page-menu-mm, #featured-drinks-mm, #featured-breweries-mm, #about-content-mm, #about-content-mm, #cocktail-list{
+#home-page-menu-mm, #featured-drinks-mm, #featured-breweries-mm, #about-content-mm, #about-content-mm, #cocktail-list, #music-page, #music-page-menu, .events-page, #events-page-menu{
 	margin-top: 40px;
 	margin-bottom: 40px;
 }
@@ -167,10 +248,42 @@ nav div li{
 }
 
 /* -- BUTTONS -- */
-.bg-yellow-button, .button {
+.button {
 	background-color: #ffb100;
 }
 
+.button:hover {
+	background-color: #1F1F1D;
+	border: thin solid #ffb100;
+}
+
+.button.expanded-hm {
+    display: block;
+}
+
+.button.expand-hm {
+		display:block;
+		width: 100%;
+		margin-right: 0;
+		margin-left: 0;
+	}
+	
+
+@media only screen and (min-width: 64em) {
+    .button.expanded-hm {
+        display: block;
+        width: 100%;
+        margin-right: 0;
+        margin-left: 0;
+    }
+}
+
+footer div div div:nth-child(2) {
+    margin-top: auto;
+}
+footer div div div:last-child {
+    margin-left: auto;
+}
 /* -- HEADERS -- */ 
 
 
@@ -192,12 +305,34 @@ nav div li{
 
 	}
 	
+	/* --TRANSITONS-- */ 
+	
+	.trans-shift-hz {
+	position: relative;
+	top: 0px;
+	left: 425px;
+	transition: left 1s;
+}
+
+.trans-shift-container-hz:hover .trans-shift-hz {
+	left: 0px;
+}
+
+	
 }
 
 @media screen and (min-width: 1024px) {
- 
+	
+	
+ 	/* --TRANSITONS-- */ 
+	
+	.trans-shift-hz {
+		left: 300px;
+	}
 	
 }
+
+
 
 /*--------------------------------------------------------------
 7.0 - UTILITES
@@ -210,7 +345,7 @@ nav div li{
 	background-color: gray;
 }
 
-.bg-black-mm p, #featured-drinks-mm p {
+.bg-black-mm p, #featured-drinks-mm p, .trans-hz p {
 	color: #fff;
 }
 
